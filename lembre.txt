@@ -1,0 +1,3 @@
+Proxima etapa, conectar banco de dados postgres
+Montar regras de negocio e levantamento de requisitos do sistema.
+Iniciar desenvolvimento do main
