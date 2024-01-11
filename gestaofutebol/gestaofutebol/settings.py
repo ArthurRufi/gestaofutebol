@@ -85,6 +85,9 @@ DATABASES = {
         'NAME': 'gestaofutebol',
         'USER': 'djangoadmin',
         'PASSWORD': '86128931',
+    },
+    '':{
+
     }
 }
 
