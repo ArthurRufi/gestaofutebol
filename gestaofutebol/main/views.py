@@ -10,6 +10,7 @@ def main(request):
 def details(request, questionid):
     return HttpResponse("You are looking at question %s" % questionid)
 
+
 def results(request, questionid):
     response = " You are looking results of question %s."
     return HttpResponse(response % questionid)
@@ -26,4 +27,4 @@ def login(request):
 def pagnull(request, null):
     #o null vai ser usado no html para fins finais kkkkkkkk
     context = {'null': null}
-    return HttpResponse("Ta procurando demais %s nao existe" %null)
+    return HttpResponse("Ta procurando demais, %s nao existe" %null)
