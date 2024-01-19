@@ -7,19 +7,6 @@ def main(request):
     return render(request, 'main/html/index.html')
 
 
-def details(request, questionid):
-    return HttpResponse("You are looking at question %s" % questionid)
-
-
-def results(request, questionid):
-    response = " You are looking results of question %s."
-    return HttpResponse(response % questionid)
-
-
-def vote(request, questionid):
-    return HttpResponse("You voting on questions %s" % questionid)
-
-
 def login(request):
     return HttpResponse("yor reuqest %s" %request)
 

@@ -6,7 +6,9 @@ class TourneyPreview():
         self.codigoverificadorquantidade = 0
         self.equipesparticipantes = equipesparticipantes
 
+
     def imparoupar(self, qtdequipes):
+        #verifica se o numero é impar ou par
         if qtdequipes % 2 == 1:
             self.impar = True
             return True
@@ -33,22 +35,19 @@ class TourneyPreview():
             if qtdequipes == 16:
                 #chaveamento mata mata por oitavas de final
                 self.codigoverificadorquantidade = 3001
-            elif qtdequipes == 9:
-                #chaveamento com três opções, mata-mata formato persoanlizado, pontos corridos, fase de grupos.
-                self.codigoverificadorquantidade = 3002
-            elif qtdequipes == 10:
-                #dois grupos com 5 times onde se classifica 2 times de cada grupo
-                self.codigoverificadorquantidade = 3003
-
             elif qtdequipes < 16:
                 #ver outras opções
-                if self.imparoupar(qtdequipes) == False:
-                    #montar chaveamentos mata mata
-                    pass
-                elif self.imparoupar(qtdequipes) == True:
+                if self.imparoupar(qtdequipes) == True:
                     #montar modelos de pontos corridos
-                    pass
-
+                    if qtdequipes == 9:
+                        #chaveamento com três opções, mata-mata formato persoanlizado, pontos corridos, fase de grupos.
+                        self.codigoverificadorquantidade = 3002
+                elif self.imparoupar(qtdequipes) == False:
+                    #chaveamento por mata mata
+                    if qtdequipes == 10:
+                        #dois grupos com 5 times onde se classifica 2 times de cada grupo
+                        self.codigoverificadorquantidade = 3003
+                    
 
         elif qtdequipes > 16 and qtdequipes <32:
             #modelo pontos corridos ou mata mata personalizado
