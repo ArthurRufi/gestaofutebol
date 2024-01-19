@@ -2,58 +2,58 @@
 class TourneyPreview():
 
     def __init__(self, equipesparticipantes):
-        self.impar = True
-        self.codigoverificadorquantidade = 0
-        self.equipesparticipantes = equipesparticipantes
+        self.is_impar = True
+        self.codigo_verificador_quantidade = 0
+        self.equipes_participantes = equipesparticipantes
 
 
-    def imparoupar(self, qtdequipes):
+    def imparoupar(self, qtde_quipes):
         #verifica se o numero é impar ou par
-        if qtdequipes % 2 == 1:
-            self.impar = True
+        if qtde_quipes % 2 == 1:
+            self.is_imparimpar = True
             return True
-        elif qtdequipes % 2 == 0:
-            self.impar = False
+        elif qtde_quipes % 2 == 0:
+            self.is_impar = False
             return False
     
 
-    def verficadordequantidade(self, qtdequipes):
+    def verficadordequantidade(self, qtde_quipes):
         
-        if qtdequipes == 3:
+        if qtde_quipes == 3:
             #modelo curto pode ser por confronto direto ou mata mata com finalista direto
             #confronto direto time1 x time2, time2 x time 3, time1 x time3
-            self.codigoverificadorquantidade = 1001
+            self.codigo_verificador_quantidade = 1001
             return 1001
         
-        elif qtdequipes >= 4 and qtdequipes <=8:
-            if self.imparoupar(qtdequipes) == False and qtdequipes != 6:
+        elif qtde_quipes >= 4 and qtde_quipes <=8:
+            if self.imparoupar(qtde_quipes) == False and qtde_quipes != 6:
                 #adicionar modelo para 4 e para 8
-                self.codigoverificadorquantidade = 2001
+                self.codigo_verificador_quantidade = 2001
             
-        elif qtdequipes > 8 and qtdequipes <=16:
+        elif qtde_quipes > 8 and qtde_quipes <=16:
             #modelo oitavas de final pode ser elegivel
-            if qtdequipes == 16:
+            if qtde_quipes == 16:
                 #chaveamento mata mata por oitavas de final
-                self.codigoverificadorquantidade = 3001
-            elif qtdequipes < 16:
+                self.codigo_verificador_quantidade = 3001
+            elif qtde_quipes < 16:
                 #ver outras opções
-                if self.imparoupar(qtdequipes) == True:
+                if self.imparoupar(qtde_quipes) == True:
                     #montar modelos de pontos corridos
-                    if qtdequipes == 9:
+                    if qtde_quipes == 9:
                         #chaveamento com três opções, mata-mata formato persoanlizado, pontos corridos, fase de grupos.
-                        self.codigoverificadorquantidade = 3002
-                elif self.imparoupar(qtdequipes) == False:
+                        self.codigo_verificador_quantidade = 3002
+                elif self.imparoupar(qtde_quipes) == False:
                     #chaveamento por mata mata
-                    if qtdequipes == 10:
+                    if qtde_quipes == 10:
                         #dois grupos com 5 times onde se classifica 2 times de cada grupo
-                        self.codigoverificadorquantidade = 3003
+                        self.codigo_verificador_quantidade = 3003
                     
 
-        elif qtdequipes > 16 and qtdequipes <32:
+        elif qtde_quipes > 16 and qtde_quipes <32:
             #modelo pontos corridos ou mata mata personalizado
 
             pass
     
 
 a = TourneyPreview(5)
-print(a.imparoupar(a.equipesparticipantes))
+print(a.imparoupar(a.equipes_participantes))
