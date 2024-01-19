@@ -1,9 +1,10 @@
 #sistema de mini inteligencia artificial que vai pegar a quantidade de time e gerar um tornei compativel, vamos treinar isso mais tarde
 class TourneyPreview():
 
-    def __init__(self):
-        impar = True
-        codigoverificadorquantidade = 0
+    def __init__(self, equipesparticipantes):
+        self.impar = True
+        self.codigoverificadorquantidade = 0
+        self.equipesparticipantes = equipesparticipantes
 
     def imparoupar(self, qtdequipes):
         if qtdequipes % 2 == 1:
@@ -15,6 +16,7 @@ class TourneyPreview():
     
 
     def verficadordequantidade(self, qtdequipes):
+        
         if qtdequipes == 3:
             #modelo curto pode ser por confronto direto ou mata mata com finalista direto
             #confronto direto time1 x time2, time2 x time 3, time1 x time3
@@ -31,7 +33,13 @@ class TourneyPreview():
             if qtdequipes == 16:
                 #chaveamento mata mata por oitavas de final
                 self.codigoverificadorquantidade = 3001
-                
+            elif qtdequipes == 9:
+                #chaveamento com três opções, mata-mata formato persoanlizado, pontos corridos, fase de grupos.
+                self.codigoverificadorquantidade = 3002
+            elif qtdequipes == 10:
+                #dois grupos com 5 times onde se classifica 2 times de cada grupo
+                self.codigoverificadorquantidade = 3003
+
             elif qtdequipes < 16:
                 #ver outras opções
                 if self.imparoupar(qtdequipes) == False:
@@ -48,3 +56,5 @@ class TourneyPreview():
             pass
     
 
+a = TourneyPreview(5)
+print(a.imparoupar(a.equipesparticipantes))
