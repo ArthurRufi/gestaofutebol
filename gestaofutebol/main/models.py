@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class Players():
+    playername : models.CharField(max_length = 40)
+    playerage : models.DateField()
