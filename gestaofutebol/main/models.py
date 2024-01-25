@@ -5,3 +5,5 @@ class Players(models.Model):
     playerage = models.DateField()
     imagem = models.IntegerField(null = True)
     
+    def __str__(self):
+        return self.playername
