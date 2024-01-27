@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     <link rel="stylesheet" href="{% static 'stylealma.css' %}">
+    <link rel="icon" href={% static "icons8-instagram-16.png" %} type= "image/x-icon">
 </head>
 <body>
 
@@ -14,18 +15,20 @@
         <div>AQUI</div>
         <div class="logo">Logo</div>
     </header>
-    <div>
-        <h1>ola</h1>
+
+    <div id= "divmaster">
+        <div class= "divsfilhas">
+            <p>aqui1</p>
+        </div>
+        <div class= "divsfilhas">
+            <p>aqui2</p>
+        </div>
+        <div class= "divsfilhas">
+            <p>aqui3</p>
+        </div>
     </div>
-    <form action="/processar_formulario" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
 
-        <label for="numero">Número:</label>
-        <input type="tel" id="numero" name="numero" pattern="[0-9]{10}" placeholder="Digite o número (10 dígitos)" required>
-
-        <button type="submit">Enviar</button>
-    </form>
+   
 
 </body>
 </html>
