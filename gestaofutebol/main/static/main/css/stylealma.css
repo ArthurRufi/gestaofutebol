@@ -50,23 +50,24 @@ button:hover {
     background-color: #45a049;
 }
 
-#divmaster {
+.divmaster {
     width: 400px;
     height: 400px;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
     margin-top: 80px;
+    margin-bottom: 100px; /* Adicione uma margem na parte inferior para acomodar a div de paginação */
 }
+
+
 
 .divsfilhas {
     width: 100px;  /* Defina a largura desejada */
-    height: auto; /* Defina a altura desejada */
+    height: 100px; /* Defina a altura desejada */
     padding: 5px;
     margin: 5px 2px 2px 5px;
     background-color: #45a049;
     transition: transform 0.1s ease;
-    max-width: 100px;
 }
 
 .divsfilhas2{
@@ -76,4 +77,15 @@ button:hover {
 .divsfilhas:hover {
     transform: scale(1.1);
     background-color: blue;
+}
+
+.divsfilhas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pagination {
+    margin-top: 20px; /* Adicione uma margem na parte superior da div de paginação */
+    clear: both; /* Limpa as margens e as bordas, garantindo que a div de paginação não flutue */
 }
