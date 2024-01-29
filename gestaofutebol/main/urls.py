@@ -7,6 +7,7 @@ app_name = 'main'
 
 urlpatterns = [
     path("", views.main, name= "main"),
+    path("mostrarteste/", views.mainteste, name="mizera")
     
 ]
 

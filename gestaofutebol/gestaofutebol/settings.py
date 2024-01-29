@@ -130,7 +130,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main\\static\\main\\css'),
-                    os.path.join(BASE_DIR, 'main\\static\\main\\images')]
+                    os.path.join(BASE_DIR, 'main\\static\\main\\images'),
+                    os.path.join(BASE_DIR, 'main\\static\\main\\images\\papapa'),]
+
+# seu_projeto/settings.py
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

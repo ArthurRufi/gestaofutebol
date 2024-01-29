@@ -53,24 +53,27 @@ button:hover {
 #divmaster {
     width: 400px;
     height: 400px;
-    position:relative;
-    left: 0;
-    top: 20px;
-    align-items: center;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-start;
+    margin-top: 80px;
 }
 
 .divsfilhas {
     width: 100px;  /* Defina a largura desejada */
-    height: 100px; /* Defina a altura desejada */
+    height: auto; /* Defina a altura desejada */
     padding: 5px;
     margin: 5px 2px 2px 5px;
     background-color: #45a049;
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
+    max-width: 100px;
+}
+
+.divsfilhas2{
+    background-color: gold;
 }
 
 .divsfilhas:hover {
     transform: scale(1.1);
+    background-color: blue;
 }
