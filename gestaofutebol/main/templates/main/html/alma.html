@@ -1,5 +1,6 @@
 <!-- seu_app/templates/seu_app/index.html -->
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +14,11 @@
 
     <div class='divmaster'>
         {% for imagem in imagens %}
-            <div class='divsfilhas'>
-                <img src="{% static 'main\\images\\papapa\\' %}{{ imagem }}" alt="{{ imagem }}">
-            </div>
+            <a href="/mostrarimagem">
+                <div class='divsfilhas'>
+                        <img src="{% static 'main\\images\\papapa\\' %}{{ imagem }}" alt="{{ imagem }}">
+                </div>
+            </a>
         {% endfor %}
     </div>
     <div class="pagination">

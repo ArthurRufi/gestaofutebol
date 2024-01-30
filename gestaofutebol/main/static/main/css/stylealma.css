@@ -57,6 +57,7 @@ button:hover {
     flex-wrap: wrap;
     margin-top: 80px;
     margin-bottom: 100px; /* Adicione uma margem na parte inferior para acomodar a div de paginação */
+    align-content: flex-start
 }
 
 
@@ -88,4 +89,9 @@ button:hover {
 .pagination {
     margin-top: 20px; /* Adicione uma margem na parte superior da div de paginação */
     clear: both; /* Limpa as margens e as bordas, garantindo que a div de paginação não flutue */
+}
+
+.links{
+    text-decoration: none;
+    color: black;
 }
