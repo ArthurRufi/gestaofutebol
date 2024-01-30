@@ -39,8 +39,10 @@ def linkimagem(request):
     if nome_da_imagem:
         # Lógica para determinar o destino do redirecionamento com base no nome_da_imagem
         # Exemplo: se a imagem for 'imagem1.jpg', redirecione para https://www.example.com/imagem1
-        destino = f'https://www.example.com/{nome_da_imagem.replace(".jpg", "")}'
+        destino = f'{nome_da_imagem.replace(".jpg", "")}'
         return redirect(destino)
     else:
         # Lógica padrão se nenhum nome de imagem for fornecido
         return render(request, 'main/html/index.html')
+    
+    

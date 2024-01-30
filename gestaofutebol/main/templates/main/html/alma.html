@@ -14,7 +14,7 @@
 
     <div class='divmaster'>
         {% for imagem in imagens %}
-            <a href="/mostrarimagem">
+            <a href='/url{{imagem}}'>
                 <div class='divsfilhas'>
                         <img src="{% static 'main\\images\\papapa\\' %}{{ imagem }}" alt="{{ imagem }}">
                 </div>
